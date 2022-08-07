@@ -2,7 +2,7 @@ mod util;
 
 #[cfg(test)]
 mod tests {
-    use crate::util::flattened_array::FlatByteMatrix32;
+    use crate::util::byte_matrix::FlatByteMatrix32;
 
     #[test]
     fn it_works() {
