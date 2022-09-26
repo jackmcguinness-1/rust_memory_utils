@@ -1,3 +1,9 @@
+
+#![allow(dead_code)]
+#![allow(unused_parens)]
+
+// I don't use any clamping here so use carefully
+
 #[derive(Debug, Copy, Clone)]
 pub struct BitArray8{
     data: u8,
