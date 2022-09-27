@@ -50,6 +50,18 @@ impl<T> Index<usize> for FlatMatrix<T>
 
 }
 
+impl<T> IndexMut<usize> for FlatMatrix<T>
+{
+
+fn index_mut(&mut self, col_idx: usize) -> &mut Self::Output{
+
+        let data_start_ptr = &mut self.data[col_idx * self.rows] as *mut T;
+        let data_slice = unsafe {std::slice::from_raw_parts_mut(data_start_ptr, self.rows)};
+
+        data_slice
+    }
+    
+}
 
 #[test]
 fn test_flatmat(){
